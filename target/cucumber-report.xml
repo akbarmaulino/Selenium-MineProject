@@ -1,108 +1,43 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="Cucumber" time="0.726" tests="5" skipped="0" failures="5" errors="0" timestamp="2025-07-16T07:37:45.225827200Z">
-<testcase classname="Employee API" name="Register a new employee" time="0.487">
-<failure type="java.lang.IllegalArgumentException" message="baseURI cannot be null">
-<![CDATA[java.lang.IllegalArgumentException: baseURI cannot be null
-	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
-	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
-	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
-	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
-	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
-	at org.codehaus.groovy.reflection.CachedConstructor.invoke(CachedConstructor.java:73)
-	at org.codehaus.groovy.reflection.CachedConstructor.doConstructorInvoke(CachedConstructor.java:60)
-	at org.codehaus.groovy.runtime.callsite.ConstructorSite$ConstructorSiteNoUnwrap.callConstructor(ConstructorSite.java:86)
-	at org.codehaus.groovy.runtime.callsite.CallSiteArray.defaultCallConstructor(CallSiteArray.java:57)
-	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callConstructor(AbstractCallSite.java:263)
-	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callConstructor(AbstractCallSite.java:277)
-	at io.restassured.internal.common.assertion.AssertParameter.notNull(AssertParameter.groovy:26)
-	at io.restassured.internal.common.assertion.AssertParameter$notNull.callStatic(Unknown Source)
-	at org.codehaus.groovy.runtime.callsite.CallSiteArray.defaultCallStatic(CallSiteArray.java:53)
-	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callStatic(AbstractCallSite.java:217)
-	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callStatic(AbstractCallSite.java:240)
-	at io.restassured.internal.RequestSpecificationImpl.<init>(RequestSpecificationImpl.groovy:134)
-	at io.restassured.RestAssured.createTestSpecification(RestAssured.java:1453)
-	at io.restassured.RestAssured.given(RestAssured.java:654)
-	at endpoints.Endpoints.registerEmployee(Endpoints.java:16)
-	at stepsOfDefinitions.EmployeeDefinitionsRefactor.send_request_register(EmployeeDefinitionsRefactor.java:30)
-	at ✽.Send employee to register with body:(file:///C:/Users/Yantrisnandra%20Akbar/Downloads/mine/src/test/java/scenario/EmployeeRefactor.feature:5)
-]]>
-</failure>
+<testsuite name="Cucumber" time="7.82" tests="5" skipped="0" failures="0" errors="0" timestamp="2025-07-22T05:02:32.040907500Z">
+<testcase classname="Employee API" name="Register a new employee" time="3.936">
 <system-out><![CDATA[
-When Send employee to register with body:...................................failed
-Then The response status must be 201........................................skipped
-And The response schema should be match with schema "RegisterSchema.json"...skipped
+When Send employee to register with body:...................................passed
+Then The response status must be 201........................................passed
+And The response schema should be match with schema "RegisterSchema.json"...passed
 ]]></system-out>
 </testcase>
-<testcase classname="Employee API" name="Login with registered employee" time="0.007">
-<failure type="java.lang.IllegalArgumentException" message="baseURI cannot be null">
-<![CDATA[java.lang.IllegalArgumentException: baseURI cannot be null
-	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
-	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
-	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
-	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
-	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
-	at org.codehaus.groovy.reflection.CachedConstructor.invoke(CachedConstructor.java:73)
-	at org.codehaus.groovy.reflection.CachedConstructor.doConstructorInvoke(CachedConstructor.java:60)
-	at org.codehaus.groovy.runtime.callsite.ConstructorSite$ConstructorSiteNoUnwrap.callConstructor(ConstructorSite.java:86)
-	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callConstructor(AbstractCallSite.java:277)
-	at io.restassured.internal.common.assertion.AssertParameter.notNull(AssertParameter.groovy:26)
-	at io.restassured.internal.common.assertion.AssertParameter$notNull.callStatic(Unknown Source)
-	at io.restassured.internal.RequestSpecificationImpl.<init>(RequestSpecificationImpl.groovy:134)
-	at io.restassured.RestAssured.createTestSpecification(RestAssured.java:1453)
-	at io.restassured.RestAssured.given(RestAssured.java:654)
-	at endpoints.Endpoints.loginEmployee(Endpoints.java:30)
-	at stepsOfDefinitions.EmployeeDefinitionsRefactor.send_request_login(EmployeeDefinitionsRefactor.java:36)
-	at ✽.Send employee to login with body:(file:///C:/Users/Yantrisnandra%20Akbar/Downloads/mine/src/test/java/scenario/EmployeeRefactor.feature:17)
-]]>
-</failure>
+<testcase classname="Employee API" name="Login with registered employee" time="2.022">
 <system-out><![CDATA[
-When Send employee to login with body:......................................failed
-Then The response status must be 200........................................skipped
-And Save the token from the response to local storage.......................skipped
+When Send employee to login with body:......................................passed
+Then The response status must be 200........................................passed
+And Save the token from the response to local storage.......................passed
 ]]></system-out>
 </testcase>
-<testcase classname="Employee API" name="Update employee details" time="0.003">
-<failure type="java.lang.AssertionError" message="Token in context null">
-<![CDATA[java.lang.AssertionError: Token in context null
-	at stepsOfDefinitions.EmployeeDefinitionsRefactor.make_sure_token_not_empty(EmployeeDefinitionsRefactor.java:25)
-	at ✽.Make sure token in local storage not empty(file:///C:/Users/Yantrisnandra%20Akbar/Downloads/mine/src/test/java/scenario/EmployeeRefactor.feature:28)
-]]>
-</failure>
+<testcase classname="Employee API" name="Update employee details" time="0.624">
 <system-out><![CDATA[
-Given Make sure token in local storage not empty............................failed
-When Send a request to update with body:....................................skipped
-Then The response status must be 200........................................skipped
-And name in the response must be "Akbar Maulino Edited".....................skipped
-And job in the response must be "Quality Assurance Edited"..................skipped
+Given Make sure token in local storage not empty............................passed
+When Send a request to update with body:....................................passed
+Then The response status must be 200........................................passed
+And name in the response must be "Akbar Maulino Edited".....................passed
+And job in the response must be "Quality Assurance Edited"..................passed
 ]]></system-out>
 </testcase>
-<testcase classname="Employee API" name="Get employee details" time="0.021">
-<failure type="java.lang.AssertionError" message="Token in context null">
-<![CDATA[java.lang.AssertionError: Token in context null
-	at stepsOfDefinitions.EmployeeDefinitionsRefactor.make_sure_token_not_empty(EmployeeDefinitionsRefactor.java:25)
-	at ✽.Make sure token in local storage not empty(file:///C:/Users/Yantrisnandra%20Akbar/Downloads/mine/src/test/java/scenario/EmployeeRefactor.feature:41)
-]]>
-</failure>
+<testcase classname="Employee API" name="Get employee details" time="0.353">
 <system-out><![CDATA[
-Given Make sure token in local storage not empty............................failed
-When Send a request to get employee.........................................skipped
-Then The response status must be 200........................................skipped
-And email in the response must be "janet.weaver@reqres.in"..................skipped
-And first_name in the response must be "Janet"..............................skipped
-And last_name in the response must be "Weaver"..............................skipped
+Given Make sure token in local storage not empty............................passed
+When Send a request to get employee.........................................passed
+Then The response status must be 200........................................passed
+And email in the response must be "janet.weaver@reqres.in"..................passed
+And first_name in the response must be "Janet"..............................passed
+And last_name in the response must be "Weaver"..............................passed
 ]]></system-out>
 </testcase>
-<testcase classname="Employee API" name="Delete employee" time="0.005">
-<failure type="java.lang.AssertionError" message="Token in context null">
-<![CDATA[java.lang.AssertionError: Token in context null
-	at stepsOfDefinitions.EmployeeDefinitionsRefactor.make_sure_token_not_empty(EmployeeDefinitionsRefactor.java:25)
-	at ✽.Make sure token in local storage not empty(file:///C:/Users/Yantrisnandra%20Akbar/Downloads/mine/src/test/java/scenario/EmployeeRefactor.feature:49)
-]]>
-</failure>
+<testcase classname="Employee API" name="Delete employee" time="0.523">
 <system-out><![CDATA[
-Given Make sure token in local storage not empty............................failed
-When Send a request to delete employee......................................skipped
-Then The response status must be 204........................................skipped
+Given Make sure token in local storage not empty............................passed
+When Send a request to delete employee......................................passed
+Then The response status must be 204........................................passed
 ]]></system-out>
 </testcase>
 </testsuite>

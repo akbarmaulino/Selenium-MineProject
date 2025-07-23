@@ -2,7 +2,7 @@ package stepsOfDefinitions;
 
 
 import endpoints.Endpoints;
-import helper.TestContext;
+import helper.TextContext;
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
@@ -14,9 +14,9 @@ public class EmployeeDefinitionsRefactor extends Endpoints {
     public static String baseUrl;
     public static Response response;
     public static String token;
-    private final TestContext context;
+    private final TextContext context;
 
-    public EmployeeDefinitionsRefactor(TestContext context) {
+    public EmployeeDefinitionsRefactor(TextContext context) {
         this.context = context;
     }
 

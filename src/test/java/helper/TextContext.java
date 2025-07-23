@@ -5,7 +5,7 @@ import java.util.Map;
 
 import io.restassured.response.Response;
 
-public class TestContext {
+public class TextContext {
     private Response response;
     private static final Map<String, Object> data = new HashMap<>();
 
