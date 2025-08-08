@@ -1,5 +1,8 @@
 APITesting\runner\Runner.class
+WebsiteTesting\Steps\LoginSteps.class
 WebsiteTesting\Helper\hook.class
+WebsiteTesting\Pages\LoginPages.class
+WebsiteTesting\Runner\Runner.class
 APITesting\endpoints\Endpoints.class
 APITesting\helper\TextContext.class
 APITesting\stepsOfDefinitions\EmployeeDefinitionsRefactor.class
