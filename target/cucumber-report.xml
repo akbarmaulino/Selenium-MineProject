@@ -1,43 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="Cucumber" time="7.82" tests="5" skipped="0" failures="0" errors="0" timestamp="2025-07-22T05:02:32.040907500Z">
-<testcase classname="Employee API" name="Register a new employee" time="3.936">
+<testsuite name="Cucumber" time="11.479" tests="1" skipped="0" failures="0" errors="0" timestamp="2025-08-08T13:48:43.487192500Z">
+<testcase classname="Login Feature" name="Login With Valid Credentials" time="11.058">
 <system-out><![CDATA[
-When Send employee to register with body:...................................passed
-Then The response status must be 201........................................passed
-And The response schema should be match with schema "RegisterSchema.json"...passed
-]]></system-out>
-</testcase>
-<testcase classname="Employee API" name="Login with registered employee" time="2.022">
-<system-out><![CDATA[
-When Send employee to login with body:......................................passed
-Then The response status must be 200........................................passed
-And Save the token from the response to local storage.......................passed
-]]></system-out>
-</testcase>
-<testcase classname="Employee API" name="Update employee details" time="0.624">
-<system-out><![CDATA[
-Given Make sure token in local storage not empty............................passed
-When Send a request to update with body:....................................passed
-Then The response status must be 200........................................passed
-And name in the response must be "Akbar Maulino Edited".....................passed
-And job in the response must be "Quality Assurance Edited"..................passed
-]]></system-out>
-</testcase>
-<testcase classname="Employee API" name="Get employee details" time="0.353">
-<system-out><![CDATA[
-Given Make sure token in local storage not empty............................passed
-When Send a request to get employee.........................................passed
-Then The response status must be 200........................................passed
-And email in the response must be "janet.weaver@reqres.in"..................passed
-And first_name in the response must be "Janet"..............................passed
-And last_name in the response must be "Weaver"..............................passed
-]]></system-out>
-</testcase>
-<testcase classname="Employee API" name="Delete employee" time="0.523">
-<system-out><![CDATA[
-Given Make sure token in local storage not empty............................passed
-When Send a request to delete employee......................................passed
-Then The response status must be 204........................................passed
+Given I am on the login page................................................passed
+When I enter valid username and password....................................passed
+And I click the login button................................................passed
+Then I should be redirected to the homepage.................................passed
 ]]></system-out>
 </testcase>
 </testsuite>
